@@ -7,7 +7,7 @@
 ;----------------------------------------------------------
 
 
-assume cs:code,ds:dasg
+assume cs:code,ds:data
 data segment
 buffer	db 	23,12,45,32,127,3,9,58,81,72
 n 		equ	10
@@ -42,7 +42,6 @@ nexti:
 	cmp si, n-1 
 	jbe fori
 
-over:
 
 	;显示字符串
 	mov dx, offset buffer  
